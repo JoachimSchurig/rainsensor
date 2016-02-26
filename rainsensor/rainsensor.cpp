@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
     }
 
     // setup the Counter object
-    GPIO::Counter counter(gpio_pin, GPIO::GPIO_PULL::UP);
+    GPIO::Counter counter(gpio_pin, GPIO::GPIO_PULL::UP, std::chrono::milliseconds(500), std::chrono::milliseconds(5));
     counter.start();
     
     // and run the endless loop to capture the rain counter

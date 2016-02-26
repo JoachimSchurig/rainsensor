@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0DCAD91C805EB300CEE9E2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0DCAD81C805EB300CEE9E2 /* main.cpp */; };
+		AA0DCAE61C805EFA00CEE9E2 /* rainsensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0DCAE51C805EFA00CEE9E2 /* rainsensor.cpp */; };
+		AA0DCAED1C805FD100CEE9E2 /* libGPIO.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0DCAE41C805ECF00CEE9E2 /* libGPIO.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA0DCAE31C805ECF00CEE9E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0DCADF1C805ECF00CEE9E2 /* GPIO.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA04BF391C6B808900D4449B;
+			remoteInfo = GPIO;
+		};
+		AA0DCAEA1C805F9700CEE9E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0DCADF1C805ECF00CEE9E2 /* GPIO.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA04BF381C6B808900D4449B;
+			remoteInfo = GPIO;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AA0DCAD31C805EB300CEE9E2 /* CopyFiles */ = {
@@ -24,7 +42,8 @@
 
 /* Begin PBXFileReference section */
 		AA0DCAD51C805EB300CEE9E2 /* rainsensor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rainsensor; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA0DCAD81C805EB300CEE9E2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AA0DCADF1C805ECF00CEE9E2 /* GPIO.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPIO.xcodeproj; path = ../../raspi/GPIO/GPIO/GPIO.xcodeproj; sourceTree = "<group>"; };
+		AA0DCAE51C805EFA00CEE9E2 /* rainsensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rainsensor.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0DCAED1C805FD100CEE9E2 /* libGPIO.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +61,7 @@
 		AA0DCACC1C805EB300CEE9E2 = {
 			isa = PBXGroup;
 			children = (
+				AA0DCADF1C805ECF00CEE9E2 /* GPIO.xcodeproj */,
 				AA0DCAD71C805EB300CEE9E2 /* rainsensor */,
 				AA0DCAD61C805EB300CEE9E2 /* Products */,
 			);
@@ -57,9 +78,17 @@
 		AA0DCAD71C805EB300CEE9E2 /* rainsensor */ = {
 			isa = PBXGroup;
 			children = (
-				AA0DCAD81C805EB300CEE9E2 /* main.cpp */,
+				AA0DCAE51C805EFA00CEE9E2 /* rainsensor.cpp */,
 			);
 			path = rainsensor;
+			sourceTree = "<group>";
+		};
+		AA0DCAE01C805ECF00CEE9E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0DCAE41C805ECF00CEE9E2 /* libGPIO.dylib */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,6 +105,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AA0DCAEB1C805F9700CEE9E2 /* PBXTargetDependency */,
 			);
 			name = rainsensor;
 			productName = rainsensor;
@@ -106,6 +136,12 @@
 			mainGroup = AA0DCACC1C805EB300CEE9E2;
 			productRefGroup = AA0DCAD61C805EB300CEE9E2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AA0DCAE01C805ECF00CEE9E2 /* Products */;
+					ProjectRef = AA0DCADF1C805ECF00CEE9E2 /* GPIO.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AA0DCAD41C805EB300CEE9E2 /* rainsensor */,
@@ -113,16 +149,34 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		AA0DCAE41C805ECF00CEE9E2 /* libGPIO.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPIO.dylib;
+			remoteRef = AA0DCAE31C805ECF00CEE9E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA0DCAD11C805EB300CEE9E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0DCAD91C805EB300CEE9E2 /* main.cpp in Sources */,
+				AA0DCAE61C805EFA00CEE9E2 /* rainsensor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0DCAEB1C805F9700CEE9E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPIO;
+			targetProxy = AA0DCAEA1C805F9700CEE9E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA0DCADA1C805EB300CEE9E2 /* Debug */ = {
@@ -161,6 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/joachim/raspi/GPIO/GPIO/GPIO/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -198,6 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/joachim/raspi/GPIO/GPIO/GPIO/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -237,6 +293,7 @@
 				AA0DCADE1C805EB300CEE9E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
